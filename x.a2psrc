@@ -1,4 +1,6 @@
 Options:	--medium=Letter
+Options:	--pretty-print
+
 PrependLibraryPath:						\
 	/home/tf135c/.a2ps					\
 	/home/tf135c/.a2ps/sheets

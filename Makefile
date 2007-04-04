@@ -1,15 +1,33 @@
 # vim: ts=8 sw=8
 
-all:	x.a2psrc
+A2PSDIR	=${HOME}/.a2ps
 
-install: x.a2psrc
-	install -c x.a2psrc ${HOME}/.a2psrc
+TARGETS	=all install uninstall diff import
+TARGET	=all
 
-uninstall:
-	${RM} ${HOME}/.a2psrc
+SUBDIRS	=sheets
 
-diff:	x.a2psrc ${HOME}/.a2psrc
-	diff -uNp x.a2psrc ${HOME}/.a2psrc
+.PHONY:	${TARGETS} ${SUBDIRS}
 
-import: ${HOME}/.a2psrc
-	cp ${HOME}/.a2psrc x.a2psrc
+all::
+
+${TARGETS}::
+	${MAKE} TARGET=$@ ${SUBDIRS}
+
+${SUBDIRS}::
+	${MAKE} -C $@ ${TARGET}
+
+all::	x.a2psrc
+
+install:: x.a2psrc
+	install -d ${A2PSDIR}
+	install -c -m 0644 x.a2psrc ${A2PSDIR}/a2psrc
+
+uninstall::
+	${RM} ${A2PSDIR}/.a2psrc
+
+diff::	x.a2psrc ${A2PSDIR}/.a2psrc
+	diff -uNp x.a2psrc ${A2PSDIR}/a2psrc
+
+import:: ${A2PSDIR}/.a2psrc
+	cp ${A2PSDIR}/a2psrc x.a2psrc
