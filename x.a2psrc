@@ -1,1 +1,4 @@
 Options:	--medium=Letter
+PrependLibraryPath:						\
+	/home/tf135c/.a2ps					\
+	/home/tf135c/.a2ps/sheets
