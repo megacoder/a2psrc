@@ -9,14 +9,15 @@ TARGET	=all
 SUBDIRS	=
 
 SHEETS	:=$(wildcard *.ssh)
+MAPS	:=$(wildcard *.map)
 
 .PHONY:	${TARGETS} ${SUBDIRS}
 
-all::	${SHEETS}
+all::	${SHEETS} ${MAPS}
 
-install:: ${SHEETS}
+install:: ${SHEETS} ${MAPS}
 	install -d ${SHTDIR}
-	install -c -m 0644 ${SHEETS} ${SHTDIR}/
+	install -c -m 0644 ${SHEETS} ${MAPS} ${SHTDIR}/
 
 uninstall::
 	cd ${SHTDIR} && ${RM} ${SHEETS}
