@@ -3,5 +3,4 @@ Options:	--pretty-print
 Options:	--file-align=sheet
 
 PrependLibraryPath:						\
-	/home/tf135c/.a2ps					\
-	/home/tf135c/.a2ps/sheets
+	/home/tf135c/.a2ps:/home/tf135c/.a2ps/sheets
