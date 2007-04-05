@@ -26,8 +26,8 @@ install:: x.a2psrc
 uninstall::
 	${RM} ${A2PSDIR}/.a2psrc
 
-diff::	x.a2psrc ${A2PSDIR}/.a2psrc
-	diff -uNp x.a2psrc ${A2PSDIR}/a2psrc
+diff::	x.a2psrc ${A2PSDIR}/a2psrc
+	@diff -uNp x.a2psrc ${A2PSDIR}/a2psrc
 
 import:: ${A2PSDIR}/.a2psrc
 	cp ${A2PSDIR}/a2psrc x.a2psrc

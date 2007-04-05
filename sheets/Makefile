@@ -27,3 +27,8 @@ uninstall::
 # 
 # ${SUBDIRS}::
 # 	${MAKE} -C $@ ${TARGET}
+
+diff::	${SHEETS} ${SHEETS:%=${SHTDIR}/%}
+	@for x in ${SHEETS}; do						\
+		diff -uNp $${x} ${SHTDIR}/$${x};			\
+	done
