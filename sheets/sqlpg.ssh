@@ -1,4 +1,4 @@
-style "SQL PG" is
+style "PostgreSQL" is
 
 written by "Tommy Reynolds <Tommy.Reynolds@MegaCoder.com>"
 version is 1.0
