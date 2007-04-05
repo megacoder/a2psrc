@@ -1,5 +1,6 @@
 Options:	--medium=Letter
 Options:	--pretty-print
+Options:	--file-align=sheet
 
 PrependLibraryPath:						\
 	/home/tf135c/.a2ps					\

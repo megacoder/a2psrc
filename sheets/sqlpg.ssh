@@ -80,7 +80,7 @@ keywords in Keyword_strong are
 	"deferred",
 	"delete",
 	"desc",
-	"describe"",
+	"describe",
 	"descriptor",
 	"diagnostics",
 	"disconnect",
@@ -247,7 +247,7 @@ keywords in Keyword_strong are
 end keywords
 
 sequences are
-    "/*" Comment Comment "*/" Comment,
+    "--" Comment Comment,
     C-string,
     C-char
 end sequences
